@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Retrospect</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+<body>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="images/portada.png">
+		
+	<section class="portada">
+		<header class="header contenedor"> <!-- Portada -->
+			<figure class="logo-text">
+				<a href="">RETROSPECT</a>
+			</figure>
+			<div class="burgger-menu">
+				<a href="#"><i  id="botonMenu" class="icon-menu"></i> Menú</a>
+			</div>
+		</header>
+		<nav class="menu" id="menu">
+			<span class="icon-cross close" id="close"></span>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">GENERIC</a></li>
+				<li><a href="#">ELEMENTS</a></li>
+			</ul>
+		</nav>
+		<div class="flex-portada">
+			<span><i class="icon-html-five2"></i></span>
+			<h1 class="title">ETIAM ADIPISCING</h1>
+			<h4 class="slogan">MAGNA FEUGIAT LOREM DOLOR EGESTAS</h4>
+			<button class="button">LEARN MORE</button>
+		</div>
+	</section>
+	</div>
+	<section class="secA"> <!-- Seccion de dos items -->
+		<div class="contenedor">
+			<article class="article-a">
+				<div class="item-a">
+					<span class="image">
+						<img data-src="images/futurist-1.jpg" width="492" alt="Imagen Futurista">
+					</span>
+					<div class="description">
+						<h2 class="title">You're taller than you look in the tabIoids, Mr. Wayne.</h2>
+						<p class="text-description">You have inspired good. But you spat in the faces of Gotham's criminals. Didn't you think there might be casualties? Things always get worse before they get better.</p>
+						<button class="boton">Click!!</button>
+					</div>
+				</div>
+				<div class="item-b">
+					<div class="description">
+						<h2 class="title">You're taller than you look in the tabIoids, Mr. Wayne.</h2>
+						<p class="text-description">You have inspired good. But you spat in the faces of Gotham's criminals. Didn't you think there might be casualties? Things always get worse before they get better.</p>
+						<button class="boton">Click!!</button>
+					</div>
+					<span class="image">
+						<img data-src="images/futurist-2.jpg" width="492" alt="Imagen Futurista">
+					</span>
+				</div>
+			</article>
+		</div>
+	</section>
+	<section class="secB"> <!-- Seccion MultiImagenes -->
+		<h2 class="title-b">Your Punishment Must Be</h2>
+		<h4 class="text-b">Oh, hee-hee, aha. Ha, ooh, hee</h4>
+		<div class="contenedor">
+			<article class="multi-images">
+				<a href="#">
+					<img src="images/ny-5.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img src="images/ny-6.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img src="images/ny-7.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img src="images/ny-5.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img src="images/ny-6.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img src="images/ny-7.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img src="images/ny-5.jpg" alt="New York" class="b-loaded">
+				</a>
+				<a href="#">
+					<img data-src="images/ny-6.jpg" alt="New York">
+				</a>
+			</article>
+			<button class="boton">Click Me!!!</button>
+		</div>
+	</section>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="images/calle.jpg">
+		<section class="secC">
+			<h2 class="title-b">MAGNA SED CONSEQUAT TEMPUS</h1>
+			<h4 class="text-b">IPSUM DOLOR TEMPUS COMMODO TURPIS ADIPISCING TEMPOR PLACERAT SED AMET ACCUMSAN</h4>
+			<button class="boton">MAGNA FEUGIAT</button>
+		</section>
+	</div>
+	<footer class="footer">
+		<div class="contenedor">
+			<h2 class="title-b">GET IN TOUCH</h2>
+			<p class="text-b">IPSUM DOLOR TEMPUS COMMODO ADIPISCING</p>
+			<form action="" class="formulario">
+				<input type="text" placeholder="Nombre" />
+				<input type="email" placeholder="Email" />
+				<textarea placeholder="Mensaje" id="" cols="30" rows="10"></textarea>
+				<div class="botonera">
+					<button class="boton">Submit</button>
+					<button class="boton">Reset</button>
+				</div>
+			</form>
+			<hr>
+			<div class="icon-social">
+				<a href="#">
+					<i class="icon-facebook"></i>
+				</a>
+				<a href="#">
+					<i class="icon-twitter"></i>
+				</a>
+				<a href="#">
+					<i class="icon-instagram"></i>
+				</a>
+				<a href="#">
+					<i class="icon-linkedin2"></i>
+				</a>
+			</div>
+		</div>
+		<span>Development JMMoriones 2016 &copy;</span>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script>
+		var botonMenu = document.querySelector("#botonMenu");
+		var menu = document.querySelector("#menu");
+		var close = document.querySelector("#close");
+		function addMenu(evento){
+			evento.preventDefault();
+			menu.classList.add('active-menu');
+		}
+		function removeMenu(evento){
+			evento.preventDefault();
+			menu.classList.remove('active-menu');	
+		}
+		botonMenu.addEventListener("click", addMenu);
+		close.addEventListener("click", removeMenu);
+
+		//Belazy
+		var bLazy = new Blazy({
+	      selector: 'img'
+	    });
+	</script>
+	<script type="text/javascript">
+	  WebFontConfig = {
+	    google: { families: [ 'Raleway::latin', 'PT+Sans::latin' ] }
+	  };
+	  (function() {
+	    var wf = document.createElement('script');
+	    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	    wf.type = 'text/javascript';
+	    wf.async = 'true';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(wf, s);
+	  })();
+	</script>
+	<link rel="stylesheet" href="css/estilos.css">
+</body>
+</html>
